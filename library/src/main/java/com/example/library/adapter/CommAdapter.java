@@ -54,7 +54,7 @@ public abstract class CommAdapter<T,H> extends BaseAdapter{
         }
         T t = list.get(position);
 
-        setViewByHolder(holder,t);
+        setViewByHolder(holder,t ,position);
 
         return convertView;
     }
@@ -67,6 +67,6 @@ public abstract class CommAdapter<T,H> extends BaseAdapter{
         return list;
     }
 
-    public abstract void setViewByHolder(H holder, T t);
+    public abstract void setViewByHolder(H holder, T t,int position);
     public abstract H getViewHolder();
 }
