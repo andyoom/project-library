@@ -24,9 +24,8 @@ public class MyAdapter extends CommAdapter<Data.ResultBean.DataBean,MyAdapter.Vi
     }
 
     @Override
-    public void setViewByHolder(ViewHolder holder, Data.ResultBean.DataBean dataBean) {
+    public void setViewByHolder(ViewHolder holder, Data.ResultBean.DataBean dataBean, int position) {
         holder.title.setText(dataBean.getTitle());
-//        Glide.with(getContext()).load(dataBean.getThumbnail_pic_s()).into(holder.image);
         NetImageLoader.getInstance().display(dataBean.getThumbnail_pic_s(),holder.image);
     }
 
